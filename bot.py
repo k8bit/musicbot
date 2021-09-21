@@ -11,10 +11,10 @@ from cogs import guesses
 from dotenv import load_dotenv
 from discord.ext import commands
 
-
-bot=commands.Bot(command_prefix='!')
 load_dotenv()
+
 TOKEN = os.getenv('DISCORD_TOKEN')
+bot=commands.Bot(command_prefix='--')
 
 if __name__ == '__main__':
     bot.load_extension("cogs.guesses")
@@ -25,6 +25,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
+    await bot.process_commands(message)
     if message.author == bot.user:
         return
     
