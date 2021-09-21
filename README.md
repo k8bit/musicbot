@@ -1,1 +1,12 @@
-The goal of this project was to understand APIs. In the future, the bot will send a recommended indie song of the day from the Spotify API (Spotify Premium will be needed to use this bot).
+Please remember to create a ```.env``` file and place your Discord bot token in there.
+
+
+Install the required Python packages. Open terminal and ```cd``` into the project. Then run:
+```
+pip install -r requirements.txt
+```
+
+To run, execute:
+```
+./run.sh
+```
